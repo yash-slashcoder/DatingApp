@@ -32,6 +32,8 @@ import { NgxGalleryModule } from '@kolkov/ngx-gallery';
 import { PhotoEditorComponent } from './members/photo-editor/photo-editor.component';
 import { FileUploadModule } from 'ng2-file-upload';
 import { TimeagoModule } from 'ngx-timeago';
+import { PaginationModule } from 'ngx-bootstrap/pagination';
+import { ButtonsModule } from 'ngx-bootstrap/buttons';
 
 export function tokenGetter() {
   return localStorage.getItem('token');
@@ -59,9 +61,11 @@ export function tokenGetter() {
     TimeagoModule.forRoot(),
     BsDropdownModule.forRoot(),
     BsDatepickerModule.forRoot(),
+    PaginationModule.forRoot(),
     BrowserAnimationsModule,
     TabsModule.forRoot(),
     RouterModule.forRoot(appRoutes),
+    ButtonsModule.forRoot(),
     NgxGalleryModule,
     FileUploadModule,
     JwtModule.forRoot({
